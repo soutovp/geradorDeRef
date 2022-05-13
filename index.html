@@ -7,6 +7,7 @@
     <title>Gerador de Listagem</title>
     <link rel="stylesheet" href="css/estilo.css">
     <script src="js/script.js"></script>
+    <link rel="shortcut icon" href="img/ico.png" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -15,7 +16,7 @@
     <section>
         <div>
             <p>Referência</p>
-            <input type="text" name="referencia" id="">
+            <input type="text" name="referencia" id="referencia" autofocus>
         </div>
         <div>
             <p>Numerações</p>
@@ -32,6 +33,7 @@
             <p class="numerosT">43</p>
             <p class="numerosT">44</p>
             <p class="numerosT">45</p>
+            <p class="numerosT">UNI</p>
             <br>
             <input type="text" name="" id="33" class="numeros">
             <input type="text" name="" id="34" class="numeros">
@@ -46,8 +48,11 @@
             <input type="text" name="" id="43" class="numeros">
             <input type="text" name="" id="44" class="numeros">
             <input type="text" name="" id="45" class="numeros">
+            <input type="text" name="" id="uni" class="numeros">
         </div>
-
+        <input type="button" value="Listar" class="botoes" onclick="listar()">
+        <input type="button" value="Limpar" class="botoes" onclick="limpar()">
     </section>
+    <p id="resultado"></p>
 </body>
 </html>
