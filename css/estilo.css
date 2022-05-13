@@ -1,0 +1,13 @@
+.numeros, .numerosT{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+}
+.numerosT{
+    padding: 2px;
+    justify-content: center;
+}
