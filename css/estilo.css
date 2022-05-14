@@ -14,7 +14,7 @@
     text-align: center;
     align-content: center;
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
 .numeros{
     border: 2px solid gray;
@@ -23,6 +23,7 @@
 .numerosT{
     padding: 2px;
     justify-content: center;
+    height: auto;
 }
 .botoes{
     margin: 25px 0;

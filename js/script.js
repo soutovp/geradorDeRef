@@ -1,3 +1,8 @@
+function copiar(){
+    let text = document.getElementById("resultado").innerText;
+    navigator.clipboard.writeText(text);
+    alert("Texto Copiado!");
+}
 function limpar(){
     document.getElementById("resultado").innerHTML = "";
 }
