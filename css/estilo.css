@@ -1,3 +1,33 @@
+h1{
+    font-family: "Migha-Black.otf", sans-serif;
+    text-transform: uppercase;
+}
+.btnDesativado{
+    margin: 25px 0;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: solid 1px gray;
+    color: gray;
+    /* border-style: solid; */
+    border-radius: 5px;
+}
+.destacado{
+    margin: 25px 0;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: solid 1px green;
+    color: green;
+    border-style: solid;
+    /* border-color: black; */
+    border-radius: 5px;
+}
+.destacado:hover{
+    background-color: rgb(218, 218, 218);
+}
+.destacado:active{
+    background-color: black;
+    color: white        ;
+}
 #referencia{
     height: 30px;
     width: 250px;
@@ -41,4 +71,7 @@
 .botoes:active{
     background-color: white;
     color: black;
+}
+#resultado{
+    color: rgb(0, 141, 71);
 }

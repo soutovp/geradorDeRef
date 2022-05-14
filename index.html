@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/estilo.css">
     <script src="js/script.js"></script>
     <link rel="shortcut icon" href="img/ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="fonts/Migha-Black.otf">
 </head>
 <body>
     <header>
@@ -33,8 +34,6 @@
             <p class="numerosT">43</p>
             <p class="numerosT">44</p>
             <p class="numerosT">45</p>
-            <p class="numerosT">UNI</p>
-            <p class="numerosT">M</p>
             <br>
             <input type="text" name="" id="33" class="numeros">
             <input type="text" name="" id="34" class="numeros">
@@ -48,7 +47,9 @@
             <input type="text" name="" id="42" class="numeros">
             <input type="text" name="" id="43" class="numeros">
             <input type="text" name="" id="44" class="numeros">
-            <input type="text" name="" id="45" class="numeros">
+            <input type="text" name="" id="45" class="numeros"><br><br>
+            <p class="numerosT">UNI</p>
+            <p class="numerosT">M</p><br>
             <input type="text" name="" id="uni" class="numeros">
             <input type="text" name="" id="manual" class="numeros">
         </div>
@@ -58,7 +59,7 @@
         <br>
         <input type="button" value="Listar" class="botoes" onclick="listar()">
         <input type="button" value="Limpar" class="botoes" onclick="limpar()">
-        <input type="button" value="Copiar" class="botoes" onclick="copiar()">
+        <input type="button" value="Copiar" class="btnDesativado" onclick="copiar()" id="btnCopy">
     </section>
     <p id="resultado"></p>
 </body>
