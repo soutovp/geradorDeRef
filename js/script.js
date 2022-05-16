@@ -33,7 +33,7 @@ function listar(){
                 }
             }
         }
-        for(let i = 0; i<numeracoes.length-1;i++){
+        for(let i = 0; i<numeracoes.length-2;i++){
             anonimo(valor(numeracoes[i]),numeracoes[i]);
         }
         for(let i = 0; i<document.getElementById("uni").value; i++){

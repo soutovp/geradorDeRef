@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="fonts/Migha-Black.otf">
 </head>
 <body>
-    <header>
+    <header class="bordas">
         <h1>Gerador de Listagem de Referências</h1>
     </header>
-    <section>
+    <section class="bordas">
         <div>
             <p>Referência</p>
             <input type="text" name="referencia" id="referencia" autofocus>
@@ -61,6 +61,8 @@
         <input type="button" value="Limpar" class="botoes" onclick="limpar()">
         <input type="button" value="Copiar" class="btnDesativado" onclick="copiar()" id="btnCopy">
     </section>
-    <p id="resultado"></p>
+    <section class="bordas section-resultado">
+        <p id="resultado"></p>
+    </section>
 </body>
 </html>
