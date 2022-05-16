@@ -37,11 +37,15 @@ function listar(){
             anonimo(valor(numeracoes[i]),numeracoes[i]);
         }
         for(let i = 0; i<document.getElementById("uni").value; i++){
-            resultado.innerHTML += referencia+".UNI<br>";
+            if(referencia!=""){
+                resultado.innerHTML += referencia+".UNI<br>";
+            }
         }
     }else{
         for(let i = 0; i<document.getElementById("manual").value; i++){
-            resultado.innerHTML += referencia+"<br>";
+            if(referencia!=""){
+                resultado.innerHTML += referencia+"<br>";
+            }
         }
     }
     destaque();
