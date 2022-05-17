@@ -1,29 +1,51 @@
+let numeracoes = [33,34,35,36,37,38,39,40,41,42,43,44,45,"uni","manual", "referencia"]
+window.addEventListener("keyup", function(event){
+    if(event.keyCode === 13){
+        listar()
+    }
+    if($("sectionResultado").innerText != ""){
+        $("sectionResultado").style.display = "block";
+    }
+}, true);
+// for(let i=0;i<numeracoes.length;i++){
+//     new KeyboardEvent("keyup", listar()).keyup
+// }
 function destaque(){
-    if(document.getElementById("resultado").innerText != ""){
-        document.getElementById("btnCopy").className = "destacado";
+    if($("resultado").innerText != ""){
+        $("btnCopy").className = "destacado";
     }else{
-        document.getElementById("btnCopy").className = "btnDesativado"
+        $("btnCopy").className = "btnDesativado"
     }
 }
 function copiar(){
-    if(document.getElementById("resultado").innerText != ""){
-        let text = document.getElementById("resultado").innerText;
+    if($("resultado").innerText != ""){
+        let text = $("resultado").innerText;
         navigator.clipboard.writeText(text);
         alert("Texto Copiado!");
     }
 }
 function limpar(){
-    document.getElementById("resultado").innerHTML = "";
+    $("resultado").innerHTML = "";
     destaque();
+    $("sectionResultado").style.display = "none";
+}
+function clean(){
+    for(let i=0;i<numeracoes.length;i++){
+        $(numeracoes[i]).value = "";
+    }
+    $(numeracoes[16]).focus();
+    $(numeracoes[16]).value = "";
+}
+function $(nome){
+    return document.getElementById(nome);
 }
 function listar(){
-    var resultado = document.getElementById("resultado");
-    var referencia = document.getElementById("referencia").value.toUpperCase();
+    var resultado = $("resultado");
+    var referencia = $("referencia").value.toUpperCase();
     function valor(val){
-        return document.getElementById(val).value;
+        return $(val).value;
     }
-    let numeracoes = [33,34,35,36,37,38,39,40,41,42,43,44,45,"uni","manual"]
-    if(document.getElementById("manualCheck").checked != true){
+    if($("manualCheck").checked != true){
         var anonimo = function(valor, num){
             if(valor>500){
                 alert("Não é permitido valores maiores que 500");
@@ -36,17 +58,21 @@ function listar(){
         for(let i = 0; i<numeracoes.length-2;i++){
             anonimo(valor(numeracoes[i]),numeracoes[i]);
         }
-        for(let i = 0; i<document.getElementById("uni").value; i++){
+        for(let i = 0; i<$("uni").value; i++){
             if(referencia!=""){
                 resultado.innerHTML += referencia+".UNI<br>";
             }
         }
     }else{
-        for(let i = 0; i<document.getElementById("manual").value; i++){
+        for(let i = 0; i<$("manual").value; i++){
             if(referencia!=""){
                 resultado.innerHTML += referencia+"<br>";
             }
         }
     }
     destaque();
+    for(let i=0;i<numeracoes.length;i++){
+        $(numeracoes[i]).value = "";
+    }
+    $("referencia").focus();
 }
