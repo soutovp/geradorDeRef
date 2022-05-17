@@ -48,18 +48,23 @@
             <input type="text" name="" id="43" class="numeros">
             <input type="text" name="" id="44" class="numeros">
             <input type="text" name="" id="45" class="numeros"><br><br>
+        </div>
+        <div>
             <p class="numerosT">UNI</p>
             <p class="numerosT">M</p><br>
             <input type="text" name="" id="uni" class="numeros">
             <input type="text" name="" id="manual" class="numeros">
         </div>
-        <br>
-        <input type="checkbox" name="manual" id="manualCheck">
-        Manual
-        <br>
-        <input type="button" value="Listar" class="botoes" onclick="listar()">
-        <input type="button" value="Limpar" class="botoes" onclick="limpar()">
-        <input type="button" value="Copiar" class="btnDesativado" onclick="copiar()" id="btnCopy">
+        <div style="height: 20px; padding: 0; margin: 2px 0 ;">
+            <p id="warning"></p>
+        </div>
+        <div>
+            <input type="checkbox" name="manual" id="manualCheck">
+            <label for="manual">Manual</label><br>
+            <input type="button" value="Listar" class="botoes" onclick="listar()">
+            <input type="button" value="Limpar" class="botoes" onclick="limpar()">
+            <input type="button" value="Copiar" class="btnDesativado" onclick="copiar()" id="btnCopy">
+        </div>
     </section>
     <section class="bordas section-resultado" id="sectionResultado" style="display: none;">
         <p id="resultado"></p>
