@@ -28,7 +28,17 @@ h1{
 -------------------------------------------------------------------------
     SECTION START
 */
-section{
+/*  GRID SECTION 01  */
+.tableT{
+    display: table;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+/*  FIM GRID SECTION 01 
+-------------------------------------------------------------------------
+*/
+    section{
     display: block;
     width: 80%;
     margin: auto;
