@@ -1,3 +1,6 @@
+function $(nome){
+    return document.getElementById(nome);
+}
 let numeracoes = [33,34,35,36,37,38,39,40,41,42,43,44,45,"uni","manual", "referencia"];
 let count = 0;
 function warning(texto, animation){
@@ -15,7 +18,7 @@ window.addEventListener("keyup", function(event){
     if(event.keyCode === 13){
         listar()
     }
-    if($("sectionResultado").innerText != "" && event.keyCode === 13){
+    if($("sectionResultado").textContent.length > 14 && event.keyCode === 13){
         $("sectionResultado").style.display = "block";
     }
 }, true);
@@ -46,9 +49,6 @@ function clean(){
     }
     $(numeracoes[16]).focus();
     $(numeracoes[16]).value = "";
-}
-function $(nome){
-    return document.getElementById(nome);
 }
 function listar(){
     var resultado = $("resultado");
@@ -83,14 +83,16 @@ function listar(){
                     warning("Não é permitido valores maiores que 500", "warningBad");
                     return;
                 }
-                $("warning").innerHTML = "";
             }
         }
     }
     destaque();
     for(let i=0;i<numeracoes.length;i++){
         $(numeracoes[i]).value = "";
+    
     }
-    $("sectionResultado").style.display = "block";
+    if($("resultado").innerHTML!=""){
+        $("sectionResultado").style.display = "block";
+    }
     $("referencia").focus();
 }
